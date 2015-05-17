@@ -338,7 +338,6 @@ DEPENDENCIES
   hirb-unicode
   html2haml
   jbuilder (~> 2.0)
-  jquery-rails
   pry-byebug
   pry-coolline
   pry-doc
