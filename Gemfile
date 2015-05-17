@@ -26,8 +26,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Unicorn as the app server
 # gem 'unicorn'
 
-# Frontend
+# UI/Frontend
 gem 'bower-rails'
+gem 'simple_form'
 
 # Authentication
 gem 'devise'
