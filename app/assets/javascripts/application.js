@@ -15,5 +15,6 @@
 //= require turbolinks
 //
 //= require underscore
+//= require bootstrap-sass
 //
 //= require_tree .
