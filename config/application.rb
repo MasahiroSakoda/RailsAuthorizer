@@ -31,5 +31,15 @@ module RailsAuthorizer
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+    
+    config.generators do |g|
+      g.orm             :active_record
+      g.template_engine :haml
+      g.test_framework  :rspec,
+          fixture:       true,
+          view_specs:    true,
+          helper_specs:  false
+      g.fixture_replacement :factory_girl, dir: 'spec/factories'
+    end
   end
 end
