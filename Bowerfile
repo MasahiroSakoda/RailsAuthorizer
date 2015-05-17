@@ -4,4 +4,7 @@
 # Functional Programming
 asset 'underscore'
 
+# jQuery plugins
+asset 'jquery-ujs'
+
 # asset 'bootstrap'
