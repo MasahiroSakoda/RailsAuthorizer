@@ -1,0 +1,11 @@
+.container
+  .row
+    .col-md-6.col-md-offset-3.well
+      %h2 Forgot your password?
+      = simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }, :html => {:class => 'form-horizontal'}) do |f|
+        = devise_error_messages!
+        .field
+          = f.input :email, autofocus: true
+        .actions
+          = f.button :submit, "Send me reset password instructions"
+      = render "devise/shared/links"
