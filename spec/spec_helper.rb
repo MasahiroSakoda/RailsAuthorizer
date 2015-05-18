@@ -84,4 +84,10 @@ RSpec.configure do |config|
   # as the one that triggered the failure.
   Kernel.srand config.seed
 =end
+  
+  # Call Devise helper for controller
+  config.include Devise::TestHelpers, type: :controller
+  # Call Devise macro for controller
+  config.extend  ControllerMacros,    type: :controller
+  
 end
