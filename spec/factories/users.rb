@@ -3,7 +3,6 @@ FactoryGirl.define do
     email {FFaker::Internet.email}
     password              "hogehoge"
     password_confirmation "hogehoge"
-    confirmed_at Date.today
   end
 
 end
