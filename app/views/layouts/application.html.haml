@@ -7,4 +7,15 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
+    - if notice or alert
+      - if notice
+        .alert.alert-success
+          = notice
+          %a.close{href: '#', 'data-dismiss': 'alert', 'aria-hidden': 'true'}
+            &times;
+      - elsif alert
+        .alert.alert-danger
+          = alert
+          %a.close{href: '#', 'data-dismiss': 'alert', 'aria-hidden': 'true'}
+            &times;
     = yield
