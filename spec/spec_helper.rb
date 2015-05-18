@@ -85,6 +85,9 @@ RSpec.configure do |config|
   Kernel.srand config.seed
 =end
   
+  # Skip "FactoryGirl" statement
+  config.include FactoryGirl::Syntax::Methods
+  
   # Call Devise helper for controller
   config.include Devise::TestHelpers, type: :controller
   # Call Devise macro for controller
