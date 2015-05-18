@@ -93,4 +93,18 @@ RSpec.configure do |config|
   # Call Devise macro for controller
   config.extend  ControllerMacros,    type: :controller
   
+  # Configuration for DatabaseCleaner
+  config.before :suite do
+    DatabaseCleaner.strategy   = :truncation
+    DatabaseCleaner.clean_with = :truncation
+  end
+  
+  config.before :each do
+    DatabaseCleaner.start
+  end
+  
+  config.after  :each do
+    DatabaseCleaner.clean
+  end
+  
 end
